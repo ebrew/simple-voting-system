@@ -1,0 +1,12 @@
+whitenoise==3.3.1
+django-crispy-forms
+Pillow==6.2.0
+python -m pip install bootstrap4
+pip install django-crispy-forms -U
+pip install -r requirements.txt
+
+python manage.py makemigrations vote
+python manage.py sqlmigrate vote 0001
+python manage.py migrate
+
+Django~=3.1.5

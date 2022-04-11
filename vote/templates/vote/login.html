@@ -1,0 +1,71 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Ghana National Campaign Education Colation</title>
+
+    <style>
+        .navbar-brand{
+            padding-left: 400px;
+        }
+        body{
+            background-image: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fdam%2Fimageserve%2F1063184564%2F960x0.jpg%3Ffit%3Dscale");
+        }
+    </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+      <div class="container-fluid" >
+        <a class="btn btn-outline-warning my-2 my-sm-0" href="{% url 'options' %}">View Results</a>
+        <a  class="navbar-brand" href="#">Ghana National  Education Campaign Colation</a>
+      </div>
+    </nav>
+    <div class="container">
+        {% if messages %}
+            {% for message in messages %}
+                      <div class="alert alert-{{ message.tags }}">
+                         {{ message }}
+                      </div>
+                   {% endfor %}
+                {% endif %}
+    </div>
+
+    <div class="container">
+        <form method="POST" action="{% url 'login' %}" class="form-signin">
+        {% csrf_token %}
+        <div class="form-group mb-4">
+            <label class="sr-only">Full Name</label>
+            <input type="text" name="name" id="first_name" class="form-control" placeholder="Enter Full Name" required autofocus>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto" style="padding-top: 20px">
+            <button class="btn btn-danger" type="submit">VERIFY</button>
+        </div>
+    </form>
+    </div>
+
+
+    <div class="d-grid gap-2 col-6 mx-auto" style="padding-top: 330px">
+      <a class="btn btn-warning" href="{% url 'register' %}">ADD VOTER</a>
+   </div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+
+
+ </body>
+</html>
